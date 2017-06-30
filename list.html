@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ajouter une categorie</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="styles.css" rel="stylesheet" type="text/css" media="all" />
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+ <script src="js/angular.min.js"></script>
+<body>
+	<div ng-app="myAppList" ng-controller="myCtrlList"> 
+		<table>
+  			<tr ng-repeat="x in categories">
+    		<td>{{ x.categorie }}</td>
+    		<td>
+    			<ul>
+    				<li ng-repeat="y in unites">{{y.unite}}</li>
+    			</ul>{{ x.Country }}
+    		</td>
+    		<td>
+    			<button>Modifier</button>
+    			<button>Supprimer</button>
+    		</td>
+ 		 	</tr>
+		</table>
+	</div>
+	<script>
+		var app = angular.module('myAppList', []);
+		app.controller('myCtrlList', function($scope) {
+    	
+    	
+		});
+</script>
+</body>
+</html>
